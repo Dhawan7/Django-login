@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap4 %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registeration Form</title>
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css"%}">
+  </head>
+  <body class='bg-dark'>
+    <div class="container py-3 my-5">
+      <div class="row">
+        <div class="col-md-6 py-3 mx-auto bg-light" style='border-radius:10px;'>
+          <h2 class='alert alert-secondary text-center'>Registeration Form</h2>
+          <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form uform %}
+            <input type="submit" class='btn btn-success'>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
